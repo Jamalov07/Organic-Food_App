@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>9-dars</title>
+    <!-- main css -->
+    <link href="/styles/style.css" rel="stylesheet" />
+    <!-- box icons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Rosario:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- header started -->
+    <header class="py-12 shadow-md">
+      <div class="container bg-white mx-auto">
+        <nav class="nav flex justify-around items-center h-4">
+          <ul class="nav__list hidden justify-between w-1/4 sm:hidden md:flex">
+            <li class="nav__list--item">
+              <a
+                href="#"
+                class="nav__list--item-link hover:text-slate-400 active:text-green-700 duration-200"
+                >About us</a
+              >
+            </li>
+            <li class="nav__list--item">
+              <a
+                href="#"
+                class="nav__list--item-link hover:text-slate-400 active:text-green-700 duration-200"
+                >Service</a
+              >
+            </li>
+            <li class="nav__list--item">
+              <a
+                href="#"
+                class="nav__list--item-link hover:text-slate-400 active:text-green-700 duration-200"
+                >Menu</a
+              >
+            </li>
+            <li class="nav__list--item">
+              <a
+                href="#"
+                class="nav__list--item-link hover:text-slate-400 active:text-green-700 duration-200"
+                >Contact</a
+              >
+            </li>
+          </ul>
+          <a class="nav__logo" href="#">
+            <img
+              src="./images/planet-earth (1) 1.svg"
+              alt="img"
+              class="hover:scale-105 duration-200"
+            />
+          </a>
+          <ul
+            class="nav__menu flex w-72 justify-end items-center md:justify-between lg:justify-between"
+          >
+            <li class="nav__menu--item hidden sm:hidden md:block">
+              <span
+                class="bg-green-100 h-10 w-10 flex justify-center items-center rounded-full"
+              >
+                <i class="bx bx-search-alt-2"></i>
+              </span>
+            </li>
+            <li class="nav__menu--item hidden sm:hidden md:block">
+              <span
+                class="bg-green-100 h-10 w-10 flex justify-center items-center rounded-full"
+              >
+                <span><i class="bx bx-cart-download"></i></span>
+              </span>
+            </li>
+            <li class="nav__menu--item">
+              <button
+                class="register-btn bg-green-600 px-6 py-2 rounded-lg text-white hover:bg-green-700 active:text-yellow-300 duration-300 active:bg-green-800"
+              >
+                Register now
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- header finished -->
+    <!-- modal window started -->
+    <div
+      class="modal-window bg-[#00000059] w-full min-h-screen fixed top-0 z-10 hidden"
+    >
+      <div
+        class="modal-content duration-200 w-[800px] min-h-[580px] bg-white mx-auto mt-40 rounded-2xl overflow-hidden"
+      >
+        <div class="modal-header bg-slate-200 text-slate-800 p-4 text-center">
+          <h2 class="font-bold text-2xl uppercase text-slate-800">
+            Registration form:
+          </h2>
+        </div>
+        <div
+          class="modal-body bg-white min-h-[440px] flex justify-center items-center"
+        >
+          <form action="#" class="min-w-[80%] p-3 text-center">
+            <label for="fullname" class="w-full">
+              <p class="mb-2 text-left ml-12">
+                Enter fullname <span class="text-red-600">*</span>
+              </p>
+              <input
+                type="text"
+                class="w-[80%] mx-auto p-3 mb-4 focus:ring-4 focus:ring-sky-400 rounded-sm focus:outline-none border"
+                id="fullname"
+                placeholder="Enter fullname"
+              />
+            </label>
+            <label for="tel" class="w-full">
+              <p class="mb-2 text-left ml-12">
+                Enter phone number <span class="text-red-600">*</span>
+              </p>
+              <input
+                type="tel"
+                class="w-[80%] mx-auto p-3 mb-4 focus:ring-4 focus:ring-sky-400 rounded-sm focus:outline-none border"
+                id="tel"
+                placeholder="Enter phone number"
+              />
+            </label>
+
+            <label for="password" class="w-full">
+              <p class="mb-2 text-left ml-12">
+                Enter password <span class="text-red-600">*</span>
+              </p>
+              <input
+                type="password"
+                class="w-[80%] mx-auto p-3 mb-4 focus:ring-4 focus:ring-sky-400 rounded-sm focus:outline-none border"
+                id="tel"
+                placeholder="Enter password"
+              />
+            </label>
+
+            <button
+              type="submit"
+              class="btn block my-4 w-[80%] mx-auto bg-green-600 px-4 py-2 rounded-lg text-white font-bold hover:bg-green-700 focus:ring-4 focus:ring-green-400 duration-200"
+            >
+              SIGN UP
+            </button>
+          </form>
+        </div>
+        <div class="modal-footer bg-slate-200 text-right p-2">
+          <button
+            class="close-btn bg-red-600 px-4 py-2 rounded-lg m-3 text-white font-bold hover:bg-red-700 focus:ring-4 focus:ring-red-400 duration-200"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- modal window finished -->
+
+    <main>
+      <section class="intro bg-green-50 mb-44">
+        <div class="container mx-auto text-center">
+          <img
+            class="absolute"
+            src="./images/fresh-melientha-suavis-pierre-leaves-white-surface_51524-12145-removebg-preview 1.png"
+            alt=""
+          />
+          <div class="intro__wrapper w-8/12 mx-auto pt-[93px] text-center">
+            <h1
+              class="text-6xl font-bold w-[783px] mx-auto mb-[26px] leading-[90px]"
+            >
+              Organic Fruit & Vegetables
+            </h1>
+            <p class="text-[#555555] text-lg w-[637px] mx-auto leading-8">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley...
+            </p>
+
+            <div
+              class="icon intro__link flex items-center mx-auto justify-center h-[70px] mt-[40px]"
+            >
+              <a href="">Order Now </a>
+              <i
+                class="bx bx-right-arrow-alt w-[60px] h-[60px] bg-green-500 flex justify-center items-center text-center text-2xl ml-4 rounded-full text-white hover:bg-green-700 active:text-yellow-300 duration-300 active:bg-green-800 cursor-pointer"
+              ></i>
+            </div>
+          </div>
+          <div class="intro__product flex justify-around">
+            <img
+              src="./images/vegetables-fruits.png"
+              class="w-[862px]"
+              alt="img"
+            />
+            <div class="intro__product--info p-2"></div>
+            <!-- shu yerda cardlar bo'ladi -->
+          </div>
+        </div>
+      </section>
+      <section class="relative">
+        <div class="container mx-auto pb-36">
+          <h1 class="text-5xl font-bold w-1/2">Why We Aer The Best?</h1>
+          <p class="w-1/2 my-5">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley...
+          </p>
+          <div class="best-wrapper flex justify-around items-center">
+            <div class="wrapper-cards pt-5">
+              <!-- shu yerda service lar bo'ladi -->
+            </div>
+            <img src="./images/bola.png" alt="" />
+          </div>
+        </div>
+        <img
+          class="absolute text--[#F3FBF8] right-3 top-0 -z-10 w-[944px] h-[531px]"
+          src="./images/Vector 16.svg"
+          alt=""
+        />
+      </section>
+      <section class="bg-blue-50 py-14">
+        <div class="container mx-auto relative">
+          <div class="flex items-center justify-between">
+            <img
+              src="./images/Group 5287.jpg"
+              class="w-[600px] h-[600px]"
+              alt=""
+            />
+            <div
+              class="explor-info flex flex-col justify-start items-start gap-y-4 w-3/5"
+            >
+              <h1 class="text-5xl font-bold">Explor Our Special Items</h1>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer...
+              </p>
+              <div
+                class="icon intro__link flex items-center justify-start h-[70px]"
+              >
+                <a href="">Explor Now</a>
+                <i
+                  class="bx bx-right-arrow-alt w-[60px] h-[60px] bg-green-500 flex justify-center items-center text-center text-2xl ml-4 rounded-full text-white hover:bg-green-700 active:text-yellow-300 duration-300 active:bg-green-800 cursor-pointer"
+                ></i>
+              </div>
+            </div>
+          </div>
+          <img
+            class="absolute -right-10 -bottom-20"
+            src="./images/fresh-melientha-suavis-pierre-leaves-white-surface_51524-12145-removebg-preview 1.png"
+            alt=""
+          />
+        </div>
+      </section>
+      <section class="pt-24">
+        <div class="container mx-auto">
+          <div class="about-wrapper flex items-center justify-between">
+            <div class="about-info w-1/2 flex flex-col gap-y-7">
+              <h1 class="text-5xl font-bold">
+                What Our Customers About Us saying
+              </h1>
+              <small>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book. It has
+                survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged. It was
+                popularis
+              </small>
+              <div class="flex justify-around w-1/2 items-end">
+                <div class="info-name flex flex-col gap-y-2">
+                  <h2 class="font-bold">Ahmed Hridoy</h2>
+                  <div class="flex">
+                    <img src="./images/Vector (3) (1).svg" alt="" />
+                    <img src="./images/Vector (3) (1).svg" alt="" />
+                    <img src="./images/Vector (3) (1).svg" alt="" />
+                    <img src="./images/Vector (3) (1).svg" alt="" />
+                    <img src="./images/Vector (3).svg" alt="" />
+                  </div>
+                </div>
+                <div class="flex justify-between items-center w-24">
+                  <h1
+                    class="py-1 px-3 opacity-50 border-2 border-[#00000027] rounded-full hover:bg-amber-300 active:bg-amber-600 active:text-blue-900 cursor-pointer hover:text-red-700"
+                  >
+                    <
+                  </h1>
+                  <h1
+                    class="py-1 px-3 border-2 rounded-full bg-green-600 text-white hover:bg-green-800 active:bg-green-900 cursor-pointer"
+                  >
+                    >
+                  </h1>
+                </div>
+              </div>
+            </div>
+            <div class="about-image">
+              <img
+                class="w-[444px] h-[446px] p-10 bg-blue-50 rounded-full"
+                src="./images/bohemian-man-with-his-arms-crossed_1-removebg-preview.png"
+                alt=""
+              />
+              <div
+                class="others flex flex-col gap-y-1 bg-white w-[220px] cursor-pointer h-[80px] pl-2 rounded-lg relative -top-20"
+              >
+                <div class="flex">
+                  <img src="./images/Vector (3) (1).svg" alt="" />
+                  <img src="./images/Vector (3) (1).svg" alt="" />
+                  <img src="./images/Vector (3) (1).svg" alt="" />
+                  <img src="./images/Vector (3) (1).svg" alt="" />
+                  <img src="./images/Vector (3).svg" alt="" />
+                </div>
+                <div class="users flex w-40 h-8 relative items-center">
+                  <img
+                    class="absolute hover:w-40 hover:h-40 hover:z-20 hover:top-20"
+                    src="./images/Ellipse 116.svg"
+                    alt=""
+                  />
+                  <img
+                    class="absolute left-4 z-10 hover:w-40 hover:h-40 hover:z-20 hover:top-20"
+                    src="./images/Ellipse 120.svg"
+                    alt=""
+                  />
+                  <img
+                    class="absolute left-8 z-10 hover:w-40 hover:h-40 hover:z-20 hover:top-20"
+                    src="./images/Ellipse 121.svg"
+                    alt=""
+                  />
+                  <img
+                    class="absolute left-12 z-10 hover:w-40 hover:h-40 hover:z-20 hover:top-20"
+                    src="./images/Ellipse 123.svg"
+                    alt=""
+                  />
+                  <img
+                    class="absolute left-16 z-10 hover:w-40 hover:h-40 hover:z-20 hover:top-20"
+                    src="./images/Ellipse 124.svg"
+                    alt=""
+                  />
+                  <img
+                    class="absolute left-20 z-10 hover:w-40 hover:h-40 hover:z-20 hover:top-20"
+                    src="./images/Ellipse 125.svg"
+                    alt=""
+                  />
+                  <div class="flex items-center">
+                    <p
+                      class="absolute leading-[34px] left-24 font-bold px-1 rounded-full z-10 text-center text-2xl bg-blue-50"
+                    >
+                      +
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="pt-[156px] pb-[146px]">
+        <div class="container mx-auto flex justify-evenly relative">
+          <img src="./images/Group 5280.png" alt="" />
+          <img
+            class="absolute left-28 top-8 -z-10"
+            src="./images/Group 5278.png"
+            alt=""
+          />
+          <div class="download-info flex flex-col w-2/4 justify-between">
+            <small
+              class="py-1 px-6 w-36 rounded-lg bg-blue-200 cursor-pointer hover:scale-105"
+              >Download App</small
+            >
+            <h1 class="text-5xl font-bold">
+              Simple Way To Order Your Organic Fruit
+            </h1>
+            <p class="text-neutral-500">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer...
+            </p>
+            <div class="social flex justify-between w-3/5 text-white">
+              <div
+                class="appstore flex bg-black px-4 py-1 rounded-lg justify-between cursor-pointer hover:scale-105"
+              >
+                <img src="./images/Group.svg" class="w-[50px]" alt="" />
+                <div>
+                  <p>Download on the</p>
+                  <h6>App Store</h6>
+                </div>
+              </div>
+              <div
+                class="googleplay flex bg-black px-4 py-1 rounded-lg cursor-pointer hover:scale-105"
+              >
+                <img src="./images/Group 2.svg" class="w-[50px]" alt="" />
+                <div>
+                  <p>GET IT ON</p>
+                  <h6>Google Play</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="pt-[66px] pb-[118px]">
+        <div class="container mx-auto flex justify-between">
+          <div class="with-logo flex justify-between flex-col">
+            <img
+              class="w-[70px] h-[70px] mb-4 hover:scale-105"
+              src="./images/planet-earth (1) 1.svg"
+              alt="img"
+            />
+            <small class="w-[260px]">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer...
+            </small>
+          </div>
+          <ul class="navigation flex flex-col justify-around">
+            <h1 class="font-bold text-2xl">Navigation</h1>
+            <li class="hover:scale-125">
+              <a class="hover:text-blue-500" href="#">About us</a>
+            </li>
+            <li class="hover:scale-125">
+              <a class="hover:text-blue-500" href="#">Service</a>
+            </li>
+            <li class="hover:scale-125">
+              <a class="hover:text-blue-500" href="#">Menu</a>
+            </li>
+          </ul>
+          <ul class="resources flex flex-col justify-around">
+            <h1 class="font-bold text-2xl">Resources</h1>
+
+            <li class="hover:scale-125">
+              <a class="hover:text-blue-500" href="#">Reviews</a>
+            </li>
+            <li class="hover:scale-125">
+              <a class="hover:text-blue-500" href="#">Blog</a>
+            </li>
+            <li class="hover:scale-125">
+              <a class="hover:text-blue-500" href="#">Update News</a>
+            </li>
+          </ul>
+          <div class="contact flex flex-col justify-around">
+            <h1 class="font-bold text-2xl">Contact us</h1>
+            <h5>Email: oyasim@email.com</h5>
+            <div class="icons flex justify-around">
+              <img
+                class="hover:bg-blue-600 rounded-full px-3 py-1 cursor-pointer"
+                src="./images/Group (2).svg"
+                alt=""
+              />
+              <img
+                class="hover:bg-blue-600 rounded-full px-2 py-1 cursor-pointer"
+                src="./images/Group (1).svg"
+                alt=""
+              />
+              <img
+                class="hover:bg-orange-600 rounded-full px-2 py-1 cursor-pointer"
+                src="./images/instagram 1.svg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
+  <script src="./script/index.js"></script>
+</html>
